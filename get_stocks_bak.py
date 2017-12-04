@@ -16,7 +16,7 @@ except:
 
 tickers=Config.get('stocks','tickers').split(',')
 
-stocks='Stock update: '
+stocks='Actualización de la bolsa: '
 
 for ticker in tickers:
   try: 
@@ -32,14 +32,14 @@ for ticker in tickers:
 
     whole_price = floor(stock_price)
     decimal_price = floor((stock_price - whole_price)*100)
-    stock_price = bsn.n2w(int(whole_price)) + ' dollars'
+    stock_price = bsn.n2w(int(whole_price)) + ' dólares'
     if decimal_price > 0:
-      stock_price += ' and ' + bsn.n2w(int(decimal_price)) + ' cents'
+      stock_price += ' y ' + bsn.n2w(int(decimal_price)) + ' céntimos'
     
-    stocks += stock_name + ' is trading at ' + stock_price + '.  '
+    stocks += stock_name + ' se está intercambiando a ' + stock_price + '.  '
     
   except Exception:
-    stocks = 'Failed to connect to Yahoo Finance.  '
+    stocks = 'Fallo al conectar con Yahoo Finance.  '
 
 if Config.get('main','debug') == str(1):
   print stocks
