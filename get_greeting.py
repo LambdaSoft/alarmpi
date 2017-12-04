@@ -12,17 +12,17 @@ class greeting(alarmpi_content):
     now = time.strftime("%A %B ") + day_of_month + ',' + time.strftime(" %I %M %p")
 
     if int(time.strftime("%H")) < 12:
-      period = 'morning'
+      period = 'os días'
     if int(time.strftime("%H")) >= 12:
-      period = 'afternoon'
-    if int(time.strftime("%H")) >= 17:
-      period = 'evening'
+      period = 'as tardes'
+    if int(time.strftime("%H")) >= 20:
+      period = 'as noches'
 
     # reads out good morning + my name
-    gmt = 'Good ' + period + ', '
+    gmt = 'Buen' + period + ', '
 
     # reads date and time 
-    day = ' it\'s ' + now + '.  '
+    day = ' es ' + now + '.  '
 
     greeting = gmt + self.sconfig['name'] + day
 
