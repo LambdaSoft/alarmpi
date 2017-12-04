@@ -6,7 +6,7 @@ from apcontent import alarmpi_content
 class textfile(alarmpi_content):
 
   def build(self):
-    textfile = 'Textfile enabled but file could not be read.'
+    textfile = 'Archivo de texto activado pero no puede ser leido.'
 
     try:
       with open(self.sconfig['filepath'], 'r') as myfile:
