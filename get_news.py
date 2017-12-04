@@ -29,11 +29,11 @@ class news(alarmpi_content):
       newsfeed = newsfeed.encode('utf-8')
 
       # Today's news from BBC
-      news = 'And now, The latest stories from the World section of the BBC News.  ' + newsfeed
+      news = 'Y ahora, Las noticias de última hora.  ' + newsfeed
         
 
     except rss.bozo:
-      news = 'Failed to reach BBC News'
+      news = 'Fallo al conectar con la red del servidor de noticias'
 
     if self.debug:
       print news
