@@ -23,9 +23,9 @@ class btc(alarmpi_content):
       if decimal_price > 0:
         btc_price += ' and ' + bsn.n2w(int(decimal_price)) + ' cents'
 
-      btc = 'The value of 1 bitcoin is: ' + btc_price + '.  '
+      btc = 'El valor de un bitcoin es: ' + btc_price + '.  '
     except Exception:
-      btc = 'Failed to connect to coinbase.  '
+      btc = 'Fallo de conexión a coinbase.  '
 
   #print response_dictionary['amount']
   #print response_dictionary['subtotal']['amount']
