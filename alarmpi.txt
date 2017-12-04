@@ -1,1 +1,1 @@
-I could not talk to the network test host.   I believe the network is down.
+No puedo comunicarme con la red.   Creo que la red se cayó.
