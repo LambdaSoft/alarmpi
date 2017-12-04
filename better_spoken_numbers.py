@@ -43,7 +43,7 @@ def n2w(n):
   elif n<1000000000:
     millions=(n-n%1000000)/1000000
     remainder=n-(millions*1000000)
-    words=n2w(millions)+' millon'
+    words=n2w(millions)+' millón'
     if remainder>0:
       words+=' '+n2w(remainder)
     return words
