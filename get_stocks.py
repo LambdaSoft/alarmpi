@@ -58,18 +58,18 @@ class stocks(alarmpi_content):
 
         whole_price = floor(stock_price)
         decimal_price = floor((stock_price - whole_price)*100)
-        stock_price_spoken = bsn.n2w(int(whole_price)) + ' dollars'
+        stock_price_spoken = bsn.n2w(int(whole_price)) + ' dólares'
         if decimal_price > 0:
-          stock_price_spoken += ' and ' + bsn.n2w(int(decimal_price)) + ' cents'
+          stock_price_spoken += ' y ' + bsn.n2w(int(decimal_price)) + ' céntimos'
         
-        stocks += stock_name + ' is trading at ' + stock_price_spoken + '.  '
+        stocks += stock_name + ' se está intercambiando a ' + stock_price_spoken + '.  '
         stocks_display += str(symbol) + ' ' + str(stock_price) + str(stock_change) + ', '
 
 
       except Exception:
         if self.debug:
-          print ticker + ' Failed.'
-        stocks = 'Failed to connect to Yahoo Finance.  '
+          print ticker + ' Fallo.'
+        stocks = 'Fallo al conectar con Yahoo Finance.  '
 
     if self.debug:
       print stocks
