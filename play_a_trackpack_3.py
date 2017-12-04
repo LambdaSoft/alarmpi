@@ -8,7 +8,7 @@ Config=ConfigParser.ConfigParser()
 try:
   Config.read('alarm.config')
 except:
-  raise Exception('Sorry, Failed reading alarm.config file.')
+  raise Exception('Disculpe, Error al leer el archivo alarm.config .')
 
 if Config.get('main','light') == str(1):
   print subprocess.call ('python lighton_1.py', shell=True)
