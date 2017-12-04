@@ -54,37 +54,37 @@ class weather_yahoo(alarmpi_content):
 
 
         if conditions != forecast_conditions:
-          conditions = conditions + ' becoming ' + forecast_conditions 
-        weather_yahoo = 'Weather for today is ' + str(conditions) + ' currently ' + str(current) + ' degrees with a low of ' + str(current_low) + ' and a high of ' + str(current_high) + '.  '
+          conditions = conditions + ' comenzando a ' + forecast_conditions 
+        weather_yahoo = 'El tiempo para hoy es de ' + str(conditions) + ' actualmente ' + str(current) + ' grados con una mínima de ' + str(current_low) + ' y una máxima de ' + str(current_high) + '.  '
 
     # Wind uses the Beaufort scale
         if self.sconfig['metric'] == str(1) and self.sconfig['wind'] == str(1):
           if wind < 1:
-              gust = 'It is calm'
+              gust = 'En calma'
           if wind > 1:
-              gust = 'With Light Air'
+              gust = 'Con un aire ligero'
           if wind > 5:
-              gust = 'With a light breeze'
+              gust = 'Con una ligera brisa'
           if wind > 12:
-              gust = 'With a gentle breeze'
+              gust = 'Con una suave brisa'
           if wind > 20:
-              gust = 'With a moderate breeze'
+              gust = 'Con una brisa moderada'
           if wind > 29:
-              gust = 'With a fresh breeze'
+              gust = 'Con una brisa fresca'
           if wind > 39:
-              gust = 'With a strong breeze'
+              gust = 'Con una fuerte brisa'
           if wind > 50:
-              gust = 'With High winds at ' + wind + 'kilometres per hour'
+              gust = 'Con altos vientos a ' + wind + 'kilometros por hora'
           if wind > 62:
-              gust = 'With Gale force winds at ' + wind + 'kilometres per hour'
+              gust = 'Con vientos fuertes a ' + wind + 'kilometros por hora'
           if wind > 75:
-              gust = 'With a strong gale at ' + wind + 'kilometres per hour'
+              gust = 'Con un fuerte viento a ' + wind + 'kilometros por hora'
           if wind > 89:
-              gust = 'With Storm winds at ' + wind + 'kilometres per hour'
+              gust = 'Con vientos tormentosos a ' + wind + 'kilometros por hora'
           if wind > 103:
-              gust = 'With Violent storm winds at ' + wind + 'kilometres per hour'
+              gust = 'Con vientos violentamente tormentosos a ' + wind + 'kilometros por hora'
           if wind > 118:
-              gust = 'With Hurricane force winds at ' + wind + 'kilometres per hour'
+              gust = 'Con vientos huracanados a ' + wind + 'kilometros por hora'
           if wind == '':
               gust = ''
           weather_yahoo = weather_yahoo + str(gust) + '.  '
@@ -94,10 +94,10 @@ class weather_yahoo(alarmpi_content):
             int(time.strftime("%m")) < 4 or
             wind > 5 and
             int(time.strftime("%m")) > 10):
-          weather_yahoo = weather_yahoo + ' And a windchill of ' + str(wind_chill) + '.  '
+          weather_yahoo = weather_yahoo + ' Y una sensación térmica de ' + str(wind_chill) + '.  '
 
     except Exception:
-      weather_yahoo = 'Failed to connect to Yahoo Weather.  '
+      weather_yahoo = 'Fallo al conectar con Yahoo Weather.  '
 
     if self.debug:
       print weather_yahoo
