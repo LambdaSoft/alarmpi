@@ -18,7 +18,7 @@ class birthday(alarmpi_content):
     if birthday is None:
       birthday = self._default()
     else:
-      birthday = 'Today is ' + birthday + 's birthday.' 
+      birthday = 'Hoy es el cumpleaños de ' + birthday + '.' 
 
     if self.debug:
       print birthday
