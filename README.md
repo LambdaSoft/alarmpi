@@ -16,6 +16,8 @@ And see the details of each of the three parts.
 
 3) NAS https://youtu.be/T5eKBfstpI0
 
+INSTRUCCIONES:
+
 *required packages:*
 
 `sudo apt-get install python-feedparser python-dnspython mpg123 festival`
@@ -64,7 +66,8 @@ First of all you need to open the file /etc/apt/sources.list and check it contai
 ```shell
 deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi
 # Uncomment line below then 'apt-get update' to enable 'apt-get source'
-deb-src http://archive.raspbian.org/raspbian/ jessie main contrib non-free rpi```
+deb-src http://archive.raspbian.org/raspbian/ jessie main contrib non-free rpi
+```
 
 Then as it says in the comment, do:
 
