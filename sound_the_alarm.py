@@ -39,7 +39,7 @@ for section in AlmEnv.sections():
       if stype == 'content':
         wadparts.extend(sections[stype][section].get(AlmEnv.netup) + "   ")
     except ImportError:
-      raise ImportError('Failed to load '+section)
+      raise ImportError('Error al cargar '+section)
 
 count = 1
 
